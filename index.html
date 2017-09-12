@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+		<link href="plugins/materialize/css/materialize.min.css" rel="stylesheet" type="text/css">
+		<link href="plugins/materialize/material_icon/icon.css" rel="stylesheet" type="text/css">
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<script src="plugins/jquery-3.2.1.min.js" type="text/javascript"></script>
+		<script src="plugins/materialize/js/materialize.min.js" type="text/javascript"></script>
+		<script src="js/funciones.js" type="text/javascript"></script>
+		<title>Contenido - Proyectos Nacionales</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="nav-wrapper green darken-3">
+					<a href="#" class="brand-logo center">Proyectos Nacionales</a>
+					<a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<div id="menu">
+				<ul id="slide-out" class="side-nav fixed">
+					<li><a href="#!" class="green-text darken-3" onclick="load_content(this,'introduccion.html')">Introducción</a></li>
+					<li class="no-padding">
+					<ul class="collapsible collapsible-accordion">
+					<li>
+						<a class="collapsible-header">Planteo General<i class="material-icons">arrow_drop_down</i></a>
+						<div class="collapsible-body">
+						<ul>
+							<li><a href="#!" onclick="load_content(this,'planteo_general.html')">Definición</a></li>
+							<li><a href="#!" onclick="load_content(this,'tesis1.html')">Tesis 1</a></li>
+							<li><a href="#!" onclick="load_content(this,'experiencias_adquiridas_3.html')">Tesis 2</a></li>
+							<li><a href="#!" onclick="load_content(this,'experiencias_adquiridas_4.html')">Tesis 3</a></li>
+							<li><a href="#!" onclick="load_content(this,'experiencias_adquiridas_5.html')">Tesis 4</a></li>
+							<li><a href="#!" onclick="load_content(this,'experiencias_adquiridas_5.html')">Tesis 5</a></li>
+							<li><a href="#!" onclick="load_content(this,'experiencias_adquiridas_5.html')">Tesis 6</a></li>
+							<li><a href="#!" onclick="load_content(this,'experiencias_adquiridas_5.html')">Tesis 7</a></li>
+						</ul>
+						</div>
+					</li>
+					</ul>
+					</li>
+					<li><a href="#!" onclick="load_content('resumen_habilidades.html')">Recursos Disponibles</a></li>
+				</ul>
+			</div>
+			<div id="content">
+			</div>
+		</main>
+        <footer class="page-footer green darken-3">
+			<div class="center">
+				<span style="font: 18px Arial, sans-serif; display: inline-block; transform: rotate(180deg);">©</span> 2017 Cenditel
+			</div>
+        </footer>
+        <script>
+			$(document).ready(function(){
+				$(".button-collapse").sideNav();
+				load_content($('#menu li a')[0],'introduccion.html');
+				
+			});
+        </script>
+	</body>
+</html>
